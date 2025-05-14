@@ -1,0 +1,277 @@
+.sudokuSolverWrapper {
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #4f4f4f;
+    height: 100vh;
+}
+
+$font1: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+.sudokuSolverHeaderWrapper {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    border-bottom: 3px solid #4f4f4f;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: $font1;
+    .tooltipIcon {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        svg {
+            color: #c6c6c6;
+        }
+    }
+    h2 {
+        font-size: 40px;
+        
+        margin-left: 50px;
+    }
+}
+
+.tooltipText {
+    color: #4f4f4f;
+    width: 200px;
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+.sudokuSolver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+}
+
+
+
+$cellSideLength: 60px;
+$thinLineStyle: 1px solid #000;
+$thickLineStyle: 5px solid #000;
+$confirmedFontSize: 30px;
+$penciledFontSizze: 15px;
+
+.sudokuCell {
+    border: $thinLineStyle;
+    box-sizing: border-box;
+    width: $cellSideLength;
+    height: $cellSideLength;
+    font-size: $confirmedFontSize;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: 'Courier New', Courier, monospace;
+    &.confirmed {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &.editableCell {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+}
+
+input[type='number'].editableCell::-webkit-outer-spin-button, 
+input[type='number'].editableCell::-webkit-inner-spin-button,
+input[type='number'].editableCell {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield !important;
+    text-align: center;
+}
+
+input[type='number'].editableCell:focus {
+    outline: none;
+}
+
+
+
+.penciledSudokuOption {
+    width: calc($cellSideLength/3) - 2px;
+    height: calc($cellSideLength/3) - 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $penciledFontSizze;
+}
+
+
+.sudokuRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: ($cellSideLength * 9);
+    box-sizing: border-box;
+}
+
+.puzzleGrid {
+    box-sizing: border-box;
+}
+
+
+
+.sudokuRow:first-child {
+    border-top: $thickLineStyle;
+}
+
+.sudokuRow:nth-child(3n + 3) {
+    border-bottom: $thickLineStyle;
+}
+
+.sudokuCell:nth-child(3n + 3) {
+    border-right: $thickLineStyle;
+}
+
+.sudokuCell:first-child {
+    border-left: $thickLineStyle;
+}
+
+$autopencilSliderHeight: 200px;
+
+.spacingBox {
+    width: 250px;
+}
+
+.autoPencilSelection {
+    height: calc($cellSideLength * 9);
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: Objectivity;
+    .tooltipIcon {
+        svg {
+            color: #c6c6c6;
+        }
+    }
+    .autoPencilControls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: $autopencilSliderHeight;
+        .autoPencilFillDescription {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            height: 100%;
+            padding-top: 6px;
+            padding-bottom: 0px;
+            margin-bottom: 0;
+            color: #c6c6c6;
+            div {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                .tooltipIcon {
+                    margin-left: 5px;
+                    font-size: 10px;
+                    svg {
+                        color: #c6c6c6;
+                    }
+                    .tooltipBox {
+                        font-size: 14px;
+                        width: 200px;
+                        color: #4f4f4f;
+                    }
+                }
+            }
+            .active {
+                color: #000;
+                .tooltipIcon {
+                    svg {
+                        color: #c6c6c6;
+                    }
+                }
+            }
+        }
+        .autoPencilSlider {
+            height: 100%;
+            width: 30px;
+            display: inline-block;
+            writing-mode: vertical-lr;
+            appearance: slider-vertical;
+            vertical-align: middle;
+            outline: none;
+            // padding-bottom: 2px;
+            input {
+                -webkit-appearance: none;
+                appearance: none;
+                box-sizing: border-box;
+                height: 100%;
+                width: 3px;
+                background: #c6c6c6;
+                outline: none;
+                border-bottom: 8px solid #c6c6c6;
+                border-top: 8px solid #c6c6c6;
+                &::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    background: #4f4f4f;
+                    border-radius: 0 10px 0 0;
+                    width: 20px;
+                    height: 6px;
+                    margin-left: 10px;
+                }
+                &.active::-webkit-slider-thumb {
+                    background: #1e00ff;
+                }
+            }
+        }
+    }
+}
+
+.autoPencilSwitch {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+    label {
+        margin: 0 10px;
+    }
+    .tooltipIcon {
+        font-size: 10px;
+        div {
+            font-size: 15px;
+            width: 200px
+        }
+    }
+}
+
+.solveButtonWrapper {
+    width: 120px;
+    height: calc($cellSideLength * 9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        width: 80px;
+        height: 200px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        font-family: Objectivity;
+        cursor: pointer;
+        color: #4f4f4f;
+        border: 1px solid #4f4f4f;
+        border-radius: 5px;
+        background-color: #def4ff;
+    }
+
+    button:hover {
+        background-color: #b0c8ff;
+    }
+}

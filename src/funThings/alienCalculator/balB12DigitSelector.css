@@ -1,0 +1,48 @@
+.digitSelectorButton {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.digitSelectorButton:hover {
+    border: 1px solid #999;
+    border-radius: 5px;
+
+}
+
+.digitSelectorColumn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.digitSelectorRow {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+.digitSelector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zeroSixSelector {
+    margin-right: 5px;
+}
+
+.operationButtons {
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.clearButton {
+    background-color: red;
+}

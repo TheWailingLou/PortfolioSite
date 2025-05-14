@@ -1,0 +1,20 @@
+.tooltipIcon  {
+    font-family: Objectivity;
+    font-size: 16px;
+    svg {
+        color: #4f4f4f;
+    }
+    svg:hover {
+        color: #1e00ff;
+    }
+
+}
+
+
+.tooltipBox {
+    position: absolute;
+    background-color: #FFF; 
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    padding: 10px;
+}
