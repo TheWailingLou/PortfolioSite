@@ -1,0 +1,174 @@
+$font1: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+.alienCalculatorWrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.alienCalculatorHeader {
+    width: 100%;
+    height: 60px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: $font1;
+    border-bottom: 3px solid #4f4f4f;
+    margin-bottom: 20px;
+    h2 {
+        font-size: 40px;
+        margin-left: 50px;
+    }
+    .tooltipIcon {
+        color: #c6c6c6;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        svg {
+            color: #c6c6c6;
+        }
+    }
+
+    .tooltipText {
+        color: #4f4f4f;
+        width: 200px;
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+    }
+}
+
+.decimalConverterWrapper {
+    padding-bottom: 10px;
+    border-bottom: 5px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    input[type='number']::-webkit-outer-spin-button, 
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number'] {
+        -webkit-appearance: none;
+        margin: 0;
+        -moz-appearance: textfield !important;
+        text-align: center;
+    }
+
+    input[type='number']:focus {
+        outline: none;
+    }
+
+    input {
+        border: 1px solid #c6c6c6;
+        border-radius: 5px;
+        font-family: Objectivity;
+        font-size: 20px;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3px;
+        height: 40px;
+    }
+
+    .equalSign {
+        width: 30px;
+        height: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .base10Input, .base12Input {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 50px;
+    }
+
+    .base10Input {
+        width: 200px;
+    }
+
+    .base12Input {
+        width: 400px;
+    }
+
+    .numberBaseSubscript {
+        font-family: Objectivity;
+        font-size: 14px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .plusMinus {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            margin-right: 2px;
+            font-size: 12px;
+            div {
+                height: 8px;
+            }
+        }
+        .numberBaseActual {
+            padding-top: 5px;
+        }
+    }
+    .tooltipIcon {
+        svg {
+            color: #c6c6c6;
+        }
+    }
+
+    .baseAndTip {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+.digitSelector {
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    // border: 1px solid #000;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .placeholderSelectorButton {
+        width: 30px;
+        height: 30px;
+    }
+    .digitSelection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .digitSelectorRow {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+        }
+    }
+}
+
+.alienCalculator {
+    
+}
