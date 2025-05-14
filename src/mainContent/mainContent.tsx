@@ -122,7 +122,7 @@ const MainContent = () => {
                     </a> 
                 </div>
                 <div className='downloadButtonWrapper'>
-                    <a className='downloadButton' href={'./LouisAntweilerResume.pdf'} target='blank'> 
+                    <a className='downloadButton' href={'https://s3.us-east-1.amazonaws.com/builtbylouis.com/Resume-4-8-2025.pdf'} target='blank'> 
                         <span>Download CV</span> <span className='faIcon'><FontAwesomeIcon icon={faAngleDoubleDown} /> </span>
                     </a>
                 </div>
