@@ -1,42 +1,14 @@
+@import '../../globalStyles.scss';
+
 .sudokuSolverWrapper {
     width: 100%;
     padding-bottom: 20px;
-    border-bottom: 3px solid #4f4f4f;
+    border-bottom: 3px solid $colorDark;
     height: 100vh;
 }
 
-$font1: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-.sudokuSolverHeaderWrapper {
-    width: 100%;
-    height: 50px;
-    margin-top: 10px;
-    border-bottom: 3px solid #4f4f4f;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    font-family: $font1;
-    .tooltipIcon {
-        width: 20px;
-        height: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 10px;
-        svg {
-            color: #c6c6c6;
-        }
-    }
-    h2 {
-        font-size: 40px;
-        
-        margin-left: 50px;
-    }
-}
-
 .tooltipText {
-    color: #4f4f4f;
+    color: $colorDark;
     width: 200px;
     a {
         color: #000;
@@ -152,7 +124,7 @@ $autopencilSliderHeight: 200px;
     font-family: Objectivity;
     .tooltipIcon {
         svg {
-            color: #c6c6c6;
+            color: $colorLight
         }
     }
     .autoPencilControls {
@@ -169,7 +141,7 @@ $autopencilSliderHeight: 200px;
             padding-top: 6px;
             padding-bottom: 0px;
             margin-bottom: 0;
-            color: #c6c6c6;
+            color: $colorLight;
             div {
                 display: flex;
                 justify-content: flex-start;
@@ -179,12 +151,12 @@ $autopencilSliderHeight: 200px;
                     margin-left: 5px;
                     font-size: 10px;
                     svg {
-                        color: #c6c6c6;
+                        color: $colorLight;
                     }
                     .tooltipBox {
                         font-size: 14px;
                         width: 200px;
-                        color: #4f4f4f;
+                        color: $colorDark;
                     }
                 }
             }
@@ -192,7 +164,7 @@ $autopencilSliderHeight: 200px;
                 color: #000;
                 .tooltipIcon {
                     svg {
-                        color: #c6c6c6;
+                        color: $colorLight;
                     }
                 }
             }
@@ -205,28 +177,27 @@ $autopencilSliderHeight: 200px;
             appearance: slider-vertical;
             vertical-align: middle;
             outline: none;
-            // padding-bottom: 2px;
             input {
                 -webkit-appearance: none;
                 appearance: none;
                 box-sizing: border-box;
                 height: 100%;
                 width: 3px;
-                background: #c6c6c6;
+                background: $colorLight;
                 outline: none;
-                border-bottom: 8px solid #c6c6c6;
-                border-top: 8px solid #c6c6c6;
+                border-bottom: 8px solid $colorLight;
+                border-top: 8px solid $colorLight;
                 &::-webkit-slider-thumb {
                     -webkit-appearance: none;
                     appearance: none;
-                    background: #4f4f4f;
+                    background: $colorDark;
                     border-radius: 0 10px 0 0;
                     width: 20px;
                     height: 6px;
                     margin-left: 10px;
                 }
                 &.active::-webkit-slider-thumb {
-                    background: #1e00ff;
+                    background: $blueAccent;
                 }
             }
         }
@@ -263,10 +234,10 @@ $autopencilSliderHeight: 200px;
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
-        font-family: Objectivity;
+        font-family: $font2;
         cursor: pointer;
-        color: #4f4f4f;
-        border: 1px solid #4f4f4f;
+        color: $colorDark;
+        border: 1px solid $colorDark;
         border-radius: 5px;
         background-color: #def4ff;
     }

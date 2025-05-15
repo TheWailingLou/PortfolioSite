@@ -1,0 +1,202 @@
+@import '../globalStyles.scss';
+
+$introHeight: 800px;
+$intoMarginTop: 100px;
+
+.mainContent {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.colorshift {
+    position:absolute;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: -10;
+
+    .colorshiftTop {
+        width: 100%;
+        height: calc($intoMarginTop + ($introHeight/2));
+    }
+    
+    .colorshiftBottom {
+        width: 100%;
+        height: 50%;
+        height: calc(100vh - ($intoMarginTop + ($introHeight/2)));
+        background-color: #000;
+    }
+}
+
+
+.introduction {
+    width: 100vw;
+    margin-top: $intoMarginTop;
+    height: $introHeight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headshotWrapper {
+    border: 3px solid #000;
+    border-right: none;
+    border-radius: 50% 0 0 50%;
+    width: $introHeight;
+    height: $introHeight;
+    background-color: #fff;
+}
+
+.headshot {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.introductionGreeting {
+    width: 1000px;
+    height: 800px;
+    border: 3px solid #000;
+    border-left: none;
+    background-color: #FFF;
+    border-radius: 0 10px 10px 0 ;
+
+    font-size: 50px;
+    color: $colorDark;
+    display: flex;
+    font-family: $font1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .greeting {
+        font-size: 60px;
+    }
+
+    .thinkingAbout {
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        font-size: 40px;
+        list-style: circle;
+    }
+
+
+    .thinkingWord {
+        color: $colorDark;
+    }
+
+    .websiteWord {
+        color: $blueAccent;
+        text-decoration: none;
+    }
+
+    span {
+        color: #000;
+    }
+
+    .otherThoughts {
+        font-size: 30px;
+        color: $colorLight;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .otherThoughts span {
+        color: $colorLight;
+    }
+    .otherThoughts:hover span {
+        color: $blueAccent;
+    }
+}
+
+
+
+
+
+
+.thoughtBubbleWrapper {
+    width: 0;
+    .thoughtBubble {
+        position: relative;
+        width: 300px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        top: -300px;
+        left: 0px;
+        z-index: 10;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #FFF;
+        font-family: $font2;
+    }
+}
+
+
+
+
+
+
+
+.callToAction {
+    color: $colorLight;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    font-weight: 100;
+    font-size: 20px;
+    font-family: $font2;
+
+    .underPicture {
+        width: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .downloadButtonWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1000px;
+    
+        .downloadButton{
+            width: 170px;
+            margin: 0 10px;
+            height: 40px;
+            background-color: #000;
+            color: $colorLight;    
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid $colorLight;
+            text-decoration: none;
+        }
+        
+        .downloadButton:hover {
+            color: $blueAccent;
+            border-bottom: 2px solid $blueAccent;
+        }
+    }
+}
+
+
+
+
+

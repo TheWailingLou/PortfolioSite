@@ -1,0 +1,67 @@
+@import '../globalStyles.scss';
+
+.subSectionHeader, .sectionHeader {
+    width: 100vw;
+    display: flex;
+    align-items: flex-start;
+}
+
+.subSectionHeader {
+    justify-content: flex-start;
+    border-bottom: 3px solid $colorDark; 
+    color: #000;
+    background-color: #fff;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    h1 {
+        margin-right: 10px;
+        font-family: $font1;
+        font-size: 40px;
+        margin-left: 50px;
+    }
+
+    .tooltipIcon {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            color: $colorLight;
+        }
+    }
+}
+
+.sectionHeader {
+    border-bottom: 5px solid $colorDark; 
+    height: 80px;
+    justify-content: center;
+    background-color: #000;
+    color: $colorLight;
+
+    h1 {
+        margin-right: 20px;
+        font-size: 50px;
+        font-family: $font1;
+    }
+
+    .tooltipIcon {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            color: $colorDark;
+        }
+    }
+}
+
+a.sectionAnchor {
+    content: '';
+    display: block;
+    position: relative;
+    top: -$navHeight - 20px;
+}

@@ -1,19 +1,21 @@
 import React from 'react';
+import Navbar from './mainContent/navBar';
+import LandingPage from './mainContent/landingPage';
+import AboutMe from './mainContent/aboutMe';
+import ProjectShowcase from './funThings/projectShowcase';
 
-import SudokuSolver from './funThings/sudokuSolver/sudokuSolver';
-
-
-import './App.css';
-import AlienCalculator from './funThings/alienCalculator/alienCalculator';
-import MainContent from './mainContent/mainContent';
+import './App.scss';
 
 
 const App = () => {
     return (
         <div className={'appWrapper'} >
-            {/* <SudokuSolver /> */}
-            {/* <AlienCalculator /> */}
-            <MainContent />
+            <Navbar />
+            <div className='contentWrapper'>
+                <LandingPage />
+                <AboutMe />
+                <ProjectShowcase />
+            </div>
         </div>
     )
 }

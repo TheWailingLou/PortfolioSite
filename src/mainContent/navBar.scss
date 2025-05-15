@@ -1,0 +1,33 @@
+@import '../globalStyles.scss';
+
+.stickyNav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: $navHeight;
+    background-color: $colorDark;
+    border-bottom: 5px solid $colorLight;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    .mainLinks {
+        font-family: $font2;
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            padding-right: 40px;
+            text-decoration: none;
+            color: $colorLight;
+            font-size: 25px;
+            border-bottom: 2px solid $colorLight;
+        }
+        a:hover {
+            color: #FFF;
+            border-bottom: 3px solid #fff;
+        }
+    }
+}

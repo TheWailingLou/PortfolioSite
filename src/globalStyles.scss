@@ -1,0 +1,26 @@
+@font-face {
+    font-family: Objectivity;
+    src: url('/src/assets/Objectivity-Light.otf');
+}
+
+$font1: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$font2: Objectivity;
+
+$navHeight: 100px;
+
+$colorDark: #4f4f4f;
+$colorLight: #c6c6c6;
+$blueAccent: #1e00ff;
+
+.contactIcon {
+    background-color: #0000;
+    color: #c6c6c6;  
+    border: none;       
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.contactIcon:hover {
+    color: #1e00ff;
+}

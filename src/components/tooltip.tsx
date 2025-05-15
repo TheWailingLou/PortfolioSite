@@ -21,7 +21,6 @@ const Tooltip: React.FC<{
 
     const handleMouseEnter = () => {
         if (tooltipRef.current) {
-            // const bodyPos = document.
             const position = tooltipRef.current.getBoundingClientRect();
             setPosition({
                 top: `${window.scrollY + position.top}px`,

@@ -6,6 +6,7 @@ import { editCell, solvePuzzle, updateAutoPencil } from './sudokuSolverEngine';
 import Tooltip from '../../components/tooltip';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
+import SectionHeader from '../../components/sectionHeader';
 
 
 
@@ -37,18 +38,24 @@ const SudokuSolver = () => {
         
         setSolvedPuzzle(newPuzzle)
     }
-
-    // const [showHeaderTool]
     
 
     return (
         <div className='sudokuSolverWrapper'>
-            <div className='sudokuSolverHeaderWrapper'>
+            <SectionHeader 
+                isSubheader={true} 
+                linkId='sudokuSolver'
+                sectionTitle='Sudoku Solver'
+                tooltipContent={<div className='tooltipText'>
+                    This is a <a href='https://en.wikipedia.org/wiki/Sudoku' target='blank'>Sudoku</a> solver. Enter in the numbers on the left grid, and click solve to see the solution on the right!
+                </div>}
+            />
+            {/* <div className='sudokuSolverHeaderWrapper'>
                 <h2>Sudoku Solver</h2>
                 <Tooltip content={<div className='tooltipText'>
                     This is a <a href='https://en.wikipedia.org/wiki/Sudoku' target='blank'>Sudoku</a> solver. Enter in the numbers on the left grid, and click solve to see the solution on the right!
                 </div>} />
-            </div>
+            </div> */}
             <div className={'sudokuSolver'} >
                 <div className='autoPencilSelection'>
                     <div className='autoPencilSwitch'>
