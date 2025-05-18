@@ -19,7 +19,8 @@ const thoughtList = [
     'Make it work, make it right, make it fast.',
     'Debugging...',
     'Can this be automated?',
-    'Pasta is better on a plate than a computer.'
+    'Pasta is better on a plate than a computer.',
+    'Responsive Design'
 ];
 
 export default thoughtList;

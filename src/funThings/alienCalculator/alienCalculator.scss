@@ -1,9 +1,10 @@
-$font1: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+@import '../../globalStyles.scss';
+
 
 
 .alienCalculatorWrapper {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -52,9 +53,10 @@ $font1: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-bottom: 10px;
     border-bottom: 5px solid #000;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
+    width: 60%;
 
     input[type='number']::-webkit-outer-spin-button, 
     input[type='number']::-webkit-inner-spin-button,
@@ -85,8 +87,7 @@ $font1: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     .equalSign {
         width: 30px;
         height: 30px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin: 0 50px;
     }
 
     .base10Input, .base12Input {
@@ -94,14 +95,15 @@ $font1: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         justify-content: center;
         align-items: flex-end;
         height: 50px;
+        width: 320px;
     }
 
     .base10Input {
-        width: 200px;
+        justify-content: flex-end;
     }
 
     .base12Input {
-        width: 400px;
+        justify-content: flex-start;
     }
 
     .numberBaseSubscript {
@@ -141,11 +143,13 @@ $font1: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 }
 
+.calculatorFunction {
+    width: 60%;
+}
+
 .digitSelector {
-    
     margin-top: 20px;
     margin-bottom: 20px;
-    // border: 1px solid #000;
 
     display: flex;
     justify-content: space-around;
@@ -170,5 +174,69 @@ $font1: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .alienCalculator {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: $xxxl)  {
     
+}
+
+@media only screen and (max-width: $xxl)  {
+    
+}
+
+@media only screen and (max-width: $xl)  {
+    
+}
+
+@media only screen and (max-width: $lg)  {
+    
+}
+
+@media only screen and (max-width: $md)  {
+    
+}
+
+@media only screen and (max-width: $sm)  {
+    .decimalConverterWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+        .base10Input, .base12Input {
+            justify-content:  center;
+        }
+    }
+    .digitSelector {
+        width: 95%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        min-height: 200px;
+        height: 25vh;
+        // margin: 40px 0;
+    }
+    .operationBox {
+        // width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .operandBox {
+            .digitSelection {
+                margin: 50px 0;
+            }
+            // margin: 10px 0;
+        }
+        .operandBox, .resultBox {
+            width: 90%;
+        }
+    }
+    .calculatorFunction {
+        width: 100%;
+    }
 }

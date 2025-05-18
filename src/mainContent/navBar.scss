@@ -1,10 +1,17 @@
 @import '../globalStyles.scss';
 
+.navContentWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1600px;
+}
+
 .stickyNav {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: $navHeight;
     background-color: $colorDark;
     border-bottom: 5px solid $colorLight;
@@ -28,6 +35,127 @@
         a:hover {
             color: #FFF;
             border-bottom: 3px solid #fff;
+        }
+    }
+}
+
+@media only screen and (max-width: $xxxl)  {
+    .navContentWrapper {
+        width: 1360px;
+    }
+    .stickyNav {
+        .mainLinks {
+            width: 400px;
+            a {
+                padding-right: 14px;
+                font-size: 24px;
+                margin-left: 28px;
+            }
+        }
+        .contactIcon {
+            font-size: 32px;
+            margin: 28px;
+        }
+    }
+}
+
+@media only screen and (max-width: $xxl)  {
+    .navContentWrapper {
+        width: 1160px;
+    }
+    .stickyNav {
+        .mainLinks {
+            width: 400px;
+            a {
+                padding-right: 14px;
+                font-size: 24px;
+                margin-left: 28px;
+            }
+        }
+        .contactIcon {
+            font-size: 32px;
+            margin: 28px;
+        }
+    }
+}
+
+@media only screen and (max-width: $xl)  {
+    .navContentWrapper {
+        width: 980px;
+    }
+    .stickyNav {
+        .mainLinks {
+            width: 380px;
+            a {
+                padding-right: 14px;
+                font-size: 24px;
+                margin-left: 24px;
+            }
+        }
+        .contactIcon {
+            font-size: 30px;
+            margin: 24px;
+        }
+    }
+}
+
+@media only screen and (max-width: $lg)  {
+    .navContentWrapper {
+        width: 744px;
+    }
+    .stickyNav {
+        .mainLinks {
+            width: 300px;
+            a {
+                padding-right: 14px;
+                font-size: 22px;
+                margin-left: 18px;
+            }
+        }
+        .contactIcon {
+            font-size: 28px;
+            margin: 18px;
+        }
+    }
+}
+
+@media only screen and (max-width: $md)  {
+    .navContentWrapper {
+        width: 572px;
+    }
+    .stickyNav {
+        .mainLinks {
+            width: 220px;
+            a {
+                padding-right: 14px;
+                font-size: 18px;
+                margin-left: 15px;
+            }
+        }
+        .contactIcon {
+            font-size: 25px;
+            margin: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: $sm)  {
+    .navContentWrapper {
+        width: 90%;
+    }
+    .stickyNav {
+        .mainLinks {
+            width: 190px;
+            // margin-right: 5px;
+            a {
+                padding-right: 14px;
+                font-size: 16px;
+                margin-left: 10px;
+            }
+        }
+        .contactIcon {
+            font-size: 20px;
+            margin: 10px;
         }
     }
 }

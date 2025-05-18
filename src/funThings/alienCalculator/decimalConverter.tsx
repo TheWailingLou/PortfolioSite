@@ -5,7 +5,6 @@ import eq from './symbols/eq.png';
 
 import './decimalConverter.css';
 import convertToDecimalToB12DigitArray from "./engine/convertDecimalToB12DigitArray";
-import convertNumberToBase from "./engine/convertNumberToBase";
 import Tooltip from "../../components/tooltip";
 
 const DecimalConverter = () => {

@@ -116,7 +116,7 @@ const DecimalConvertBack = ({ }) => {
         }
     }
     return (
-        <div>
+        <div className='calculatorFunction'>
             <BalB12DigitSelector handleSelectDigit={selectDigit}/>
             <div className='operationBox'>
                 <div className='operandBox'>

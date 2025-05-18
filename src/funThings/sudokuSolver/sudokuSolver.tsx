@@ -5,7 +5,7 @@ import generateEmpty from './puzzleGenerator';
 import { editCell, solvePuzzle, updateAutoPencil } from './sudokuSolverEngine';
 import Tooltip from '../../components/tooltip';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDoubleDown, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 import SectionHeader from '../../components/sectionHeader';
 
 
@@ -111,7 +111,15 @@ const SudokuSolver = () => {
                         <FontAwesomeIcon icon={faAngleDoubleRight}/>
                     </button>
                 </div>
-                
+                <div className='solveButtonWrapperVertical'>
+                    <button onClick={() => {
+                        solvePuzzleWBruteForce()
+                    }}>
+                        <FontAwesomeIcon icon={faAngleDoubleDown}/>
+                        <div>Solve</div>
+                        <FontAwesomeIcon icon={faAngleDoubleDown}/>
+                    </button>
+                </div>
                 <PuzzleGrid editable={false} puzzle={solvedPuzzle} showPencil={false} editCell={updateCell}/>
                 <div className='spacingBox'/>
             </div>

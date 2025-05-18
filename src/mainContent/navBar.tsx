@@ -8,21 +8,24 @@ import './navBar.scss';
 const Navbar = () => {
     return (
         <nav className='stickyNav'>
-            <div className='mainLinks'>
-                <a href="#aboutMe">About Me</a>
-                <a href="#funProjects">Projects</a>
+            <div className='navContentWrapper'>
+                <div className='mainLinks'>
+                    <a href="#aboutMe">About Me</a>
+                    <a href="#funProjects">Projects</a>
+                </div>
+                <div className="mediaLinks">
+                    <a className='contactIcon' target='blank' href='mailto:louis.antweiler@gmail.com?subject=Awesome Portfolio Site!'> 
+                        <FontAwesomeIcon icon={faEnvelope} />
+                    </a> 
+                    <a className='contactIcon' target='blank' href='https://www.linkedin.com/in/louis-antweiler/'> 
+                        <FontAwesomeIcon icon={faLinkedin} />
+                    </a> 
+                    <a className='contactIcon' target='blank' href='https://github.com/TheWailingLou'> 
+                        <FontAwesomeIcon icon={faGithub} />
+                    </a> 
+                </div>
             </div>
-            <div className="mediaLinks">
-                <a className='contactIcon' target='blank' href='mailto:louis.antweiler@gmail.com?subject=Awesome Portfolio Site!'> 
-                    <FontAwesomeIcon icon={faEnvelope} />
-                </a> 
-                <a className='contactIcon' target='blank' href='https://www.linkedin.com/in/louis-antweiler/'> 
-                    <FontAwesomeIcon icon={faLinkedin} />
-                </a> 
-                <a className='contactIcon' target='blank' href='https://github.com/TheWailingLou'> 
-                    <FontAwesomeIcon icon={faGithub} />
-                </a> 
-            </div>
+            
         </nav>)
 }
 

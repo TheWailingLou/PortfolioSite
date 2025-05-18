@@ -53,8 +53,8 @@ const BalB12Display = ({ digitArray }: { digitArray: (number | string)[] }) => {
             }
         })
 
-        return asImgs.map((im:string) => (
-            <img className="displayDigit" src={im}/>
+        return asImgs.map((im:string, i:number) => (
+            <img className="displayDigit" src={im} key={`imageDisplay-${i}`}/>
         ))
     }
 
